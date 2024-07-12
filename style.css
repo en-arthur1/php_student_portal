@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #ececec;
+
+}
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+
+#sidebar-toggle {
+   display: none;
+}
+#sidebar {
+   min-width: 250px;
+   max-width: 250px;
+   min-height: 100vh;
+   transition: all 0.3s;
+}
+#sidebar-toggle:checked ~ .d-flex #sidebar {
+   margin-left: -250px;
+}
+.sidebar-toggle-label {
+   cursor: pointer;
+}
+@media (max-width: 768px) {
+   #sidebar {
+       margin-left: -250px;
+   }
+   #sidebar-toggle:checked ~ .d-flex #sidebar {
+       margin-left: 0;
+   }
+}
+
+.content-section {
+   display: none;
+}
+#home:target, #courses:target, #home:target ~ #default-content {
+   display: block;
+}
+#home:target ~ #default-content {
+   display: none;
+}
+
+.course-card {
+   border: none;
+   border-radius: 15px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.course-card .card-body {
+   padding: 1.5rem;
+}
+.course-card .card-title {
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+}
+.course-card .card-text {
+   color: #6c757d;
+}
+.course-progress {
+   height: 8px;
+   border-radius: 4px;
+}
+.course-stats {
+   font-size: 0.9rem;
+   color: #6c757d;
+}
